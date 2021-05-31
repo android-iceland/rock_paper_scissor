@@ -3,9 +3,7 @@ import mediapipe as mp
 import time
 import numpy as np
 import streamlit as st
-from bokeh.models.widgets import ColorPicker
-from bokeh.models import CustomJS
-from streamlit_bokeh_events import streamlit_bokeh_events
+
 
 
 class handDetector:
@@ -15,7 +13,7 @@ class handDetector:
         maxHands=2,
         detectionCon=0.5,
         trackCon=0.5,
-        csv_path="gesture_train.csv",
+        csv_path="dataset.csv",
     ):
         self.static_image_mode = mode
         self.maxHands = maxHands
@@ -173,7 +171,7 @@ def main():
     detector = handDetector(
         detectionCon=detectionConfidence / 100,
         trackCon=trackConfidence / 100,
-        csv_path="gesture_train.csv",
+        csv_path="dataset.csv",
     )
     if run:
         while cap.isOpened():
@@ -203,4 +201,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-# streamlit run webapp.py
+# streamlit run app.py
