@@ -1,4 +1,10 @@
 # rock paper scissor
+<p align="center">
+  <img src="https://github.com/android-iceland/rock_paper_scissor/blob/main/demo.gif" alt="animated" />
+</p>
+<br>
+
+
 ## some line of code not written by me
 This web app only run on localhost <br>
 Python version >=3.7 <br>
