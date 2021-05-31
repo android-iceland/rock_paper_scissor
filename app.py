@@ -159,14 +159,11 @@ def main():
     st.title("Rock Paper scissor")
     detectionConfidence = st.slider("Hand Detection Confidence")
     trackConfidence = st.slider("Hand Tracking Confidence")
-
+    flip_the_video = st.selectbox("Horizontally flip video ",("Yes","No"))
     run = st.checkbox("Run")
     FRAME_WINDOW = st.image([])
     cap = cv2.VideoCapture(0)
     # streamlit end
-
-    cap.set(3, wCam)
-    cap.set(4, hCam)
 
     detector = handDetector(
         detectionCon=detectionConfidence / 100,
@@ -178,7 +175,11 @@ def main():
             ret, img = cap.read()
             if not ret:
                 continue
-            img = cv2.flip(img, 1)
+            if flip_the_video =="Yes":
+                img = cv2.flip(img, 1)
+            elif flip_the_video == "No":
+                pass
+            
             img, data = detector.findHands(img, draw=True)
             cTime = time.time()
             fps = 1 / (cTime - pTime)
