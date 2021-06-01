@@ -6,7 +6,7 @@
 
 
 ## some line of code not written by me
-This web app only run on localhost <br>
+This web app.py only run on localhost <br>
 Python version >=3.7 <br>
 
 
