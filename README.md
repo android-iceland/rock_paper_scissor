@@ -27,5 +27,5 @@ pip install -r requirements.txt
 To run the web app  or, double click on the run.py file
 
 ```
-python app.py
+python run.py
 ```
