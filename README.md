@@ -29,3 +29,7 @@ To run the web app  or, double click on the run.py file
 ```
 python run.py
 ```
+If you want to host the file in a server
+```
+webapp.py 
+```
