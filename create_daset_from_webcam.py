@@ -3,10 +3,8 @@ import mediapipe as mp
 import numpy as np
 
 max_num_hands = 1
-gesture = {
-    0:'fist', 1:'one', 2:'two', 3:'three', 4:'four', 5:'five',
-    6:'six', 7:'rock', 8:'spiderman', 9:'yeah', 10:'ok', 11:'fy'
-}
+gesture = {0:rock, 5:scissors, 9:paper}
+
 
 # MediaPipe hands model
 mp_hands = mp.solutions.hands
